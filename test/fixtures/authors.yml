@@ -1,11 +1,6 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  first_name: MyString
-  last_name: MyString
-  about_author: MyText
-
-two:
-  first_name: MyString
-  last_name: MyString
-  about_author: MyText
+<% 23.times do |n| %>
+author_<%= n %>:
+  first_name: <%= Faker::Name.first_name %>
+  last_name: <%= Faker::Name.last_name %>
+  about_author: <%= Faker::Lorem.sentence(word_count: 20) %>
+<% end %>
