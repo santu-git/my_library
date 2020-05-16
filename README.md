@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is blueprint of rails application to practice testing in rails using Minitest.
 
-Things you may want to cover:
+This repo has 3 branches:
 
-* Ruby version
+* master - Rails application with scaffold of Author resource. Which can be used to implement by own.
 
-* System dependencies
+* test-cases - Consist only test cases.
 
-* Configuration
+* implementation - Implementation of logic to pass test cases.
 
-* Database creation
+## How to use
 
-* Database initialization
+* Checkout master branch
+```
+git clone git@github.com:santu-git/my_library.git
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
