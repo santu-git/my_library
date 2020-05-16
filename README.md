@@ -12,8 +12,21 @@ This repo has 3 branches:
 
 ## How to use
 
-* Checkout master branch
+* Clone master branch
 ```
 git clone git@github.com:santu-git/my_library.git
+```
+* Create Database (Change config/database.yml if required)
+```
+rails db:create
+```
 
+* Migrate Database
+```
+rails db:migrate
+```
+
+* Populate some data for development environment
+```
+rails db:seed
 ```
