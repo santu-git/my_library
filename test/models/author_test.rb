@@ -1,3 +1,4 @@
+# test/models/author_test.rb
 require 'test_helper'
 
 class AuthorTest < ActiveSupport::TestCase
@@ -25,6 +26,19 @@ class AuthorTest < ActiveSupport::TestCase
     author.last_name = ''
     author.save
     assert_includes(author.errors[:last_name], "can't be blank")
+  end
+
+  test 'should not save author if about_author is less than 15 chars' do
+    author = authors(:author_1)
+    author.about_author = Faker::Lorem.characters(number: 12)
+    assert_not author.save
+  end
+
+  test 'should return validation error message if about_author is less than 15 chars' do
+    author = authors(:author_1)
+    author.about_author = Faker::Lorem.characters(number: 12)
+    author.save
+    assert_includes(author.errors[:about_author], "is too short (minimum is 15 characters)")
   end
 
   test "should save a valid record" do
