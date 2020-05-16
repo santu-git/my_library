@@ -1,6 +1,6 @@
 # README
 
-This is blueprint of rails application to practice testing in rails using Minitest.
+This is a blueprint of rails application to practice testing in rails using Minitest.
 
 This repo has 3 branches:
 
@@ -8,7 +8,7 @@ This repo has 3 branches:
 
 * test-cases - Consist only test cases.
 
-* implementation - Implementation of logic to pass test cases.
+* full-app - Implementation of logic to pass test cases.
 
 ## How to use
 
@@ -29,4 +29,14 @@ rails db:migrate
 * Populate some data for development environment
 ```
 rails db:seed
+```
+
+## To check test cases
+```
+git checkout test-cases
+```
+
+## To check out full implementation
+```
+git checkout full-app
 ```
